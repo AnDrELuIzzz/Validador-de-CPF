@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include <locale.h>
 
 void imprimeRegiao(int cpf[])
 {
@@ -39,6 +40,7 @@ bool todosRepetidos(int cpf[])
 
 int digitoVerificador(int cpf[], int mult[], int N)
 {
+
     int i, soma = 0;
     for (i = 0; i < N; i++)
     {
@@ -50,6 +52,7 @@ int digitoVerificador(int cpf[], int mult[], int N)
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
     int cpf[11];
     int m1[9] = {10, 9, 8, 7, 6, 5, 4, 3, 2};
     int m2[10] = {11, 10, 9, 8, 7, 6, 5, 4, 3, 2};
